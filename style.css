@@ -1,0 +1,20 @@
+body {
+    background-color: #F9F9F9;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container  {
+    background-color: #ffffff;
+}
+.row {
+    border: 2px solid #5cb5e2;
+}
+
+.control-label::after {
+    content: ' *';
+    color: red;
+}
+
+.achivementborder {
+    border: 2px solid #2d2b2b;
+}

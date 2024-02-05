@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://kit.fontawesome.com/380df37fe5.js" crossorigin="anonymous"></script>
+    <!-- <script type="text/javascript" src="stateList.js"></script> -->
+    <script type="text/javascript" src="script.js" defer></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script src="jspdf.js"></script>
+    <title>Noc Builder</title>
+</head>
+
+<body>
+    <div class="sticky-top p-4 badge-success text-light">
+        <h1>NOC Builder</h1>
+    </div>
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-12 bg-light p-2">
+                <h3>Branch Details</h3>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <label for="fullname" class="control-label">Branch</label>
+                <input type="text" id="branch" name="branch" class="form-control" placeholder="Branch" maxlength="50"
+                    required>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <label for="email" class="control-label">Id</label>
+                <input type="number" id="id" name="id" class="form-control" placeholder="Id" maxlength="50" required
+                    autocomplete="email">
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <label for="number" class="control-label">Date</label>
+                <input type="date" id="date" name="date" class="form-control" placeholder="todays date" maxlength="10"
+                    minlength="10" required>
+            </div>
+            <br>
+            <div class="col-md-12 text-center mt-2 mb-2">
+
+                <button type="button" class="btn badge-success" id="savepersonaldetailsbtn">Save</button>
+
+            </div>
+
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-12 bg-light p-2">
+                <h3>Company Details</h3>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <label for="fullname" class="control-label">Company Name</label>
+                <input type="text" id="companyName" name="companyName" class="form-control" placeholder="Company Name"
+                    maxlength="50" required>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <label for="City" class="control-label">Place</label>
+                <input type="text" id="place" name="place" class="form-control" placeholder="City" maxlength="40"
+                    minlength="1" required>
+            </div>
+
+            <div class="col-md-12 text-center mb-2">
+
+                <button type="button " class=" btn badge-success" id="summarybtn">save</button>
+
+            </div>
+        </div>
+
+
+        <br>
+
+        <div class="row mt-2">
+            <div class="col-12 bg-light p-2">
+                <h3>Duration</h3>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <label for="number" class="control-label">Start Date</label>
+                <input type="date" id="start" name="start" class="form-control" placeholder="todays date" maxlength="10"
+                    minlength="10" required>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <label for="number" class="control-label">End dateDate</label>
+                <input type="date" id="end" name="end" class="form-control" placeholder="todays date" maxlength="10"
+                    minlength="10" required>
+            </div>
+
+            <br>
+
+            <div class="col-md-12 text-center mb-2 mt-2">
+                <button type="button " class=" btn badge-success" id="experbtn">save</button>
+            </div>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-12 bg-light p-2">
+                <h3>Students Details</h3>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <input type="skill" id="skill" name="skill" class="form-control" placeholder="Reg" maxlength="40"
+                    minlength="1" required>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <input type="skill" id="Certificates" name="Certificates" class="form-control" placeholder="Name"
+                    maxlength="40" minlength="1" required>
+            </div>
+            <div class="col-md-4 mb-2 mt-2">
+                <!-- <i class="fa-solid fa-plus" id="skillbtn"></i> -->
+                <button type="button " class=" btn badge-success" id="skillbtn">Add Student</button>
+            </div>
+            <br>
+            <div class="col-md-12 mb-2 mt-2" id="skilldiv"></div>
+            <div class="col-md-12 text-center mb-2 mt-2">
+                <button type="button " class=" btn badge-success" id="saveskillbtn">save</button>
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-2">
+            <div class="col text-center bg-light mt-2 mb-2">
+                <button type="button" id="generatepdf" class="btn badge-success" onclick="generatePDF()"><i
+                        class="fa-solid fa-down-long"></i> Download </button>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.8/jspdf.plugin.autotable.min.js"></script> -->
+</body>
+
+</html>
