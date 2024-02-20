@@ -369,6 +369,11 @@ doc.setFont('times new roman','bold');
    y +=8; doc.text(48,y,skills[i]);
 
  }
+var img = new Image()
+img.src = 'logo.jpg'
+doc.addImage(img, 'png', 15, 3, 25, 25)
+
+doc.rect(188, 2, 25, 6);
 
 // bold
  doc.setFont('Times New Roman','bold');
