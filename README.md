@@ -17,7 +17,6 @@ This project is a web-based tool designed to automatically generate a personaliz
 ## 🛠️ Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript (for form UI)
-- **Backend:** Python (Flask)
 - **PDF Generation:** ReportLab / FPDF / WeasyPrint
 - **Deployment:** Can be run locally or deployed on platforms like Render/Heroku
 
